@@ -76,9 +76,8 @@ statistics = requests.get(api_key + "statistics")
 tracks = requests.get(api_key + "trackes")
 
 
-f = open('measurement_records.csv','a')
 
-for page in range(1,50):
+def get_data_page(page):
     measurements = requests.get(api_key + "measurements",{"page":page})
     all_records = []
     for raw_record in measurements.json()['features']:
@@ -87,7 +86,14 @@ for page in range(1,50):
         all_records.append(record.all_data)
 
     record_df = pd.DataFrame(all_records)
-    record_df.to_csv(f, index= False, header =  False)
+    return record_df
+
+f = open('measurement_records.csv','a')
+record_df = get_data_page(1)
+record_df.to_csv(f,header=  True)
+for page in range(2,50):
+    record_df = get_data_page(page)
+    record_df.to_csv(f, header =  False)
 f.close()
 
 

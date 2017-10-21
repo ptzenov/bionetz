@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc7f6a7f-e0e3-42bc-8335-866361f5d757" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/explore_data.ipynb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/measurement_records.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exploreData.ipynb" afterPath="$PROJECT_DIR$/exploreData.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/real_time_gather_data.py" afterPath="$PROJECT_DIR$/real_time_gather_data.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/explore_data.ipynb" afterPath="$PROJECT_DIR$/explore_data.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />

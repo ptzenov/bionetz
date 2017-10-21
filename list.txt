@@ -1,0 +1,73 @@
+Mode(hex) 	PID(hex) 	Data bytes returned 	Description 	Min value 	Max value 	Units 	Formula
+
+01 	0A 	1 	Fuel pressure 	0 	765 	kPa (gauge) 	A*3
+
+01 	0B 	1 	Intake manifold absolute pressure 	0 	255 	kPa (absolute) 	A
+
+01 	0C 	2 	Engine RPM 	0 	16,383.75 	rpm 	((A*256)+B)/4
+
+01 	0D 	1 	Vehicle speed 	0 	255 	km/h 	A
+
+01 	0E 	1 	Timing advance 	-64 	63.5 	° relative to #1 cylinder 	A/2 – 64
+
+01 	11 	1 	Throttle position 	0 	100 	% 	A*100/255
+
+01 	1F 	2 	Run time since engine start 	0 	65,535 	seconds 	(A*256)+B
+
+01 	21 	2 	Distance traveled with malfunction indicator lamp (MIL) on 	0 	65,535 	km 	(A*256)+B
+
+01 	22 	2 	Fuel Rail Pressure (relative to manifold vacuum) 	0 	5177.265 	kPa 	(((A*256)+B) * 10) / 128
+
+01 	2C 	1 	Commanded EGR 	0 	100 	% 	100*A/255
+
+01 	2D 	1 	EGR Error 	-100 	99.22 	% 	(A-128) * 100/128
+
+01 	2E 	1 	Commanded evaporative purge 	0 	100 	% 	100*A/255
+
+01 	2F 	1 	Fuel Level Input 	0 	100 	% 	100*A/255
+
+01 	30 	1 	# of warm-ups since codes cleared 	0 	255 	N/A 	A
+
+01 	31 	2 	Distance traveled since codes cleared 	0 	65,535 	km 	(A*256)+B
+
+01 	32 	2 	Evap. System Vapor Pressure 	-8,192 	8,192 	Pa 	((A*256)+B)/4 (A is signed)
+
+01 	33 	1 	Barometric pressure 	0 	255 	kPa (Absolute) 	A
+
+01 	3C 	2 	Catalyst TemperatureBank 1, Sensor 1 	-40 	6,513.5 	°C 	((A*256)+B)/10 – 40
+
+01 	3D 	2 	Catalyst TemperatureBank 2, Sensor 1 	-40 	6,513.5 	°C 	((A*256)+B)/10 – 40
+
+01 	3E 	2 	Catalyst TemperatureBank 1, Sensor 2 	-40 	6,513.5 	°C 	((A*256)+B)/10 – 40
+
+01 	3F 	2 	Catalyst TemperatureBank 2, Sensor 2 	-40 	6,513.5 	°C 	((A*256)+B)/10 – 40
+
+01 	42 	2 	Control module voltage 	0 	65.535 	V 	((A*256)+B)/1000
+
+01 	43 	2 	Absolute load value 	0 	25,700 	% 	((A*256)+B)*100/255
+
+01 	44 	2 	Command equivalence ratio 	0 	2 	N/A 	((A*256)+B)/32768
+
+01 	45 	1 	Relative throttle position 	0 	100 	% 	A*100/255
+
+01 	46 	1 	Ambient air temperature 	-40 	215 	°C 	A-40
+
+01 	47 	1 	Absolute throttle position B 	0 	100 	% 	A*100/255
+
+01 	48 	1 	Absolute throttle position C 	0 	100 	% 	A*100/255
+
+01 	49 	1 	Accelerator pedal position D 	0 	100 	% 	A*100/255
+
+01 	4A 	1 	Accelerator pedal position E 	0 	100 	% 	A*100/255
+
+01 	4B 	1 	Accelerator pedal position F 	0 	100 	% 	A*100/255
+
+01 	4C 	1 	Commanded throttle actuator 	0 	100 	% 	A*100/255
+
+01 	4D 	2 	Time run with MIL on 	0 	65,535 	minutes 	(A*256)+B
+
+01 	4E 	2 	Time since trouble codes cleared 	0 	65,535 	minutes 	(A*256)+B
+
+01 	52 	1 	Ethanol fuel % 	0 	100 	% 	A*100/255
+
+01 	53 	2 	Absoulute Evap system Vapour Pressure 	0 	327675 	kpa 	1/200 per bit

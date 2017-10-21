@@ -1,5 +1,6 @@
 import pandas as pd
 import requests
+
 import numpy as np
 import matplotlib.pylab as plt
 import time as t
@@ -56,12 +57,6 @@ class MeasurementRecord:
         self.all_data.update(self.geometry_data)
 
 
-
-
-
-
-
-
 # these are the possible requests
 
 api_key = "https://envirocar.org/api/stable/"
@@ -74,8 +69,6 @@ schema = requests.get(api_key+"schema")
 sensors = requests.get(api_key + "sensors")
 statistics = requests.get(api_key + "statistics")
 tracks = requests.get(api_key + "trackes")
-
-
 
 def get_data_page(page):
     measurements = requests.get(api_key + "measurements",{"page":page})
@@ -90,10 +83,10 @@ def get_data_page(page):
 
 f = open('measurement_records.csv','a')
 record_df = get_data_page(1)
-record_df.to_csv(f,header=  True)
+record_df.to_csv(f,index = False, header=  True)
 for page in range(2,50):
     record_df = get_data_page(page)
-    record_df.to_csv(f, header =  False)
+    record_df.to_csv(f,index = False, header =  False)
 f.close()
 
 

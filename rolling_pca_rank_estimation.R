@@ -77,7 +77,7 @@ get_list_ranks <- function(
   
   ranks %>% as.data.table()->ranks_dt
   ranks
-  # likelyhood <- 2*apply(ranks[ranks[,1]!=0,],2,function(x)abs(x-0.5))[,1:3] %>% 
+  # likelyhood <- 2*apply(ranks[ranks[,1]!=0,],2,function(x)abs(x-0.5))[,1:3] %>%
   #   apply(1,prod)
   
   # 0.4^3
@@ -88,3 +88,14 @@ ranks_dt <- get_list_ranks(
   dataset[,.SD,.SDcols=diffed_cols] 
 )
 ranks_dt
+
+
+
+
+
+
+
+  # likelyhood <- 2*apply(ranks[ranks[,1]!=0,],2,function(x)abs(x-0.5))[,1:3] %>%
+  #   apply(1,prod)
+  # likelyhood %>% plot(type="l")
+  
